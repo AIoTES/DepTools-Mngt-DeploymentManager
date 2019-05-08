@@ -1,0 +1,35 @@
+version: "3.3"
+
+services:
+
+  metadata_storage_server:
+    image: docker-activage.satrd.es/metadata-storage-server:0.1.1
+    restart: always
+    ports:
+      - "8081:8081"
+    links:
+      - mongo
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:3
+#    volumes:
+#        - activagemongodata:/data/db
+    ports:
+        - "27017:27017"
+
+  mongo-adminer:
+    image: mongo-express
+    environment:
+      - ME_CONFIG_OPTIONS_EDITORTHEME=ambiance
+      - ME_CONFIG_MONGODB_SERVER=mongo
+    ports:
+      - 4900:8081
+    links:
+      - mongo
+    depends_on:
+      - mongo
+
+#volumes:
+#    activagemongodata:

@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "b03724dc-7fd1-4719-bde4-af5e6053ff54",
+		"name": "activage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "metadata-storage-server",
+			"item": [
+				{
+					"name": "Create device",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"deviceID\": \"test_device\",\r\n\t\"context\": \"@prefix iotpex: <http://inter-iot.eu/GOIoTP#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix sosa: <http://www.w3.org/ns/sosa/> . @prefix act: <http://www.semanticweb.org/activage/ontologies/2018/4/activage-core#> . <Device/1_1> a iotpex:IoTDevice ; rdfs:label \\\"Fibaro motion sensor\\\"@en ; sosa:hosts <Sensor/1_1> ; sosa:hosts <Sensor/1_2> ; sosa:hosts <Sensor/1_3> . <Sensor/1_1 > a act:IlluminanceSensor . <Sensor/1_2 > a act:TemperatureSensor . <Sensor/1_3 > a act:UserOccupancySensor .\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/devices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List devices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/devices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get device by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/devices/test_device_4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"devices",
+								"test_device_4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update device",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"deviceID\": \"test_device\",\r\n\t\"context\": \"@prefix iotpex: <http://inter-iot.eu/GOIoTP#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . @prefix sosa: <http://www.w3.org/ns/sosa/> . @prefix act: <http://www.semanticweb.org/activage/ontologies/2018/4/activage-core#> . <Device/1_1> a iotpex:IoTDevice ; rdfs:label \\\"Fibaro motion sensor\\\"@en ; sosa:hosts <Sensor/1_1> ; sosa:hosts <Sensor/1_2> ; sosa:hosts <Sensor/1_3> ;  sosa:hosts <Sensor/1_4> . <Sensor/1_1 > a act:IlluminanceSensor . <Sensor/1_2 > a act:TemperatureSensor . <Sensor/1_3 > a act:UserOccupancySensor . <Sensor/1_4 > a act:UserOccupancySensor . \"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/devices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete device",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/devices/deviceId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"devices",
+								"deviceId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create deployment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": \"test_ds_1\",\r\n\t\"context\": \"@prefix prov: <http://www.w3.org/ns/prov#>. @prefix ssn: <http://www.w3.org/ns/ssn/> . @prefix iot: <http://inter-iot.eu/GOIoTP#> . @prefix org: <http://www.w3.org/ns/org#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>. @prefix sosa: <http://www.w3.org/ns/sosa/> . <Organization/1> a org:Organization ; rdfs:label \\\"Municipality of Thessaloniki.\\\"@en . <Deployment/PX_HOME1> a ssn:Deployment ; prov:startedAtTime \\\"2017-06-06\\\"^^xsd:date ; iot:hasLocation \\\"AREA[“Thessaloniki\\\"]\\\"^^http://www.opengis.net/ont/geosparql#wktLiteral prov:wasAssociatedWith <Organization/1> ; ssn:deployedOnPlatform <Platform/1> . <Platform/1> a sosa:Platform ; rdfs:label \\\"Activage Platform GR 1\\\"@en ; sosa:hosts <Device/1_1> ; sosa:hosts <Device/1_2>\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/deployments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"deployments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all deployments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/deployments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"deployments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get deployment by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/deployments/test_ds_1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"deployments",
+								"test_ds_1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update deployment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": \"test_ds_1\",\r\n\t\"context\": \"@prefix prov: <http://www.w3.org/ns/prov#>. @prefix ssn: <http://www.w3.org/ns/ssn/> . @prefix iot: <http://inter-iot.eu/GOIoTP#> . @prefix org: <http://www.w3.org/ns/org#> . @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>. @prefix sosa: <http://www.w3.org/ns/sosa/> . <Organization/1> a org:Organization ; rdfs:label \\\"Municipality of Thessaloniki.\\\"@en . <Deployment/PX_HOME1> a ssn:Deployment ; prov:startedAtTime \\\"2017-06-06\\\"^^xsd:date ; iot:hasLocation \\\"AREA[“Thessaloniki\\\"]\\\"^^http://www.opengis.net/ont/geosparql#wktLiteral prov:wasAssociatedWith <Organization/1> ; ssn:deployedOnPlatform <Platform/1> . <Platform/1> a sosa:Platform ; rdfs:label \\\"Activage Platform GR 1\\\"@en ; sosa:hosts <Device/1_1> ; sosa:hosts <Device/1_2>\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/deployments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"deployments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete deployment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/deployments/test_ds_1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"deployments",
+								"test_ds_1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [25/Apr/2019:10:37:42 +0200] "GET /api/v1/deployments/devices HTTP/1.1" 200 2 http-bio-8001-exec-2 1740
+0:0:0:0:0:0:0:1 - - [25/Apr/2019:11:55:47 +0200] "GET /api/v1/deployments/devices HTTP/1.1" 200 204 http-bio-8001-exec-2 910
+0:0:0:0:0:0:0:1 - - [25/Apr/2019:11:57:44 +0200] "GET /api/v1/deployments/devices HTTP/1.1" 200 204 http-bio-8001-exec-5 76
+0:0:0:0:0:0:0:1 - - [25/Apr/2019:11:57:59 +0200] "GET /api/v1/deployments/devices HTTP/1.1" 200 204 http-bio-8001-exec-6 49
+0:0:0:0:0:0:0:1 - - [25/Apr/2019:11:59:15 +0200] "GET /api/v1/deployments/devices HTTP/1.1" 200 364 http-bio-8001-exec-9 19
+0:0:0:0:0:0:0:1 - - [25/Apr/2019:11:59:47 +0200] "GET /api/v1/deployments/devices HTTP/1.1" 200 483 http-bio-8001-exec-10 42
+0:0:0:0:0:0:0:1 - - [25/Apr/2019:12:38:14 +0200] "GET /api/v1/deployments/ HTTP/1.1" 200 972 http-bio-8001-exec-2 535
+0:0:0:0:0:0:0:1 - - [25/Apr/2019:12:38:25 +0200] "DELETE /api/v1/deployments/deployment1/devices/device1 HTTP/1.1" 200 314 http-bio-8001-exec-3 178
+0:0:0:0:0:0:0:1 - - [25/Apr/2019:12:39:55 +0200] "PUT /api/v1/deployments/deployment1/devices/device1 HTTP/1.1" 200 324 http-bio-8001-exec-6 155

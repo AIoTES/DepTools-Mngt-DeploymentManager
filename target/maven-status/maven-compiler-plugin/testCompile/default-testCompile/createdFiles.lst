@@ -1,0 +1,5 @@
+eu/hopu/activage/mappers/DeviceMapperTest.class
+eu/hopu/activage/services/DeploymentManagerServiceTest.class
+eu/hopu/activage/utils/HopAsserts.class
+eu/hopu/activage/metadataStorageClient/MetadataOkHttpClientIntegrationTest.class
+eu/hopu/activage/mappers/DeploymentMapperTest.class

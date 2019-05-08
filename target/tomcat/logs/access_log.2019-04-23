@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:17:09 +0200] "GET /api/v1/deployments/ HTTP/1.1" 200 325 http-bio-8001-exec-2 5193
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:17:38 +0200] "POST /api/v1/deployments/ HTTP/1.1" 200 323 http-bio-8001-exec-3 8685
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:17:48 +0200] "GET /api/v1/deployments/ HTTP/1.1" 200 649 http-bio-8001-exec-4 512
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:17:55 +0200] "PUT /api/v1/deployments/deployment2/devices/device1 HTTP/1.1" 200 333 http-bio-8001-exec-5 295
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:18:01 +0200] "GET /api/v1/deployments/ HTTP/1.1" 200 659 http-bio-8001-exec-6 26
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:18:04 +0200] "DELETE /api/v1/deployments/deployment2/devices/device1 HTTP/1.1" 200 323 http-bio-8001-exec-7 89
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:18:11 +0200] "DELETE /api/v1/deployments/deployment2 HTTP/1.1" 200 - http-bio-8001-exec-8 755
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:18:23 +0200] "GET /api/v1/deployments/ HTTP/1.1" 200 325 http-bio-8001-exec-9 259
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:18:27 +0200] "GET /api/v1/deployments/deployment2 HTTP/1.1" 404 40 http-bio-8001-exec-10 273
+0:0:0:0:0:0:0:1 - - [23/Apr/2019:12:18:37 +0200] "GET /api/v1/deployments/deployment1 HTTP/1.1" 200 323 http-bio-8001-exec-10 361

@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  deployment-manager:
+    image: activage-deployment-manager:develop
+    ports:
+      - 8080:8080
+    environment:
+      - METADATA_STORAGE_SERVER_URL=http://192.168.1.192:8061

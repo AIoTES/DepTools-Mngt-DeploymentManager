@@ -1,0 +1,34 @@
+version: '3.3'
+
+services:
+  deployment-manager:
+    image: activage-deployment-manager:develop
+    ports:
+      - 8080:8080
+    environment:
+      - METADATA_STORAGE_SERVER_URL=http://192.168.1.192:8061
+    networks:
+      - deployment-manager-scenario
+
+  metadata_storage_server:
+    image: docker-activage.satrd.es/metadata-storage-server:0.1.1
+    networks:
+      - deployment-manager-scenario
+
+  mongo:
+    image: mongo:3
+    networks:
+      - deployment-manager-scenario
+
+  mongo-adminer:
+    image: mongo-express
+    environment:
+      - ME_CONFIG_OPTIONS_EDITORTHEME=ambiance
+      - ME_CONFIG_MONGODB_SERVER=mongo
+    ports:
+      - 4900:8081
+    networks:
+      - deployment-manager-scenario
+
+networks:
+  deployment-manager-scenario:

@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "ff055a99-51d2-43e2-b459-b5ebfe157499",
+		"name": "Deployment Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List All Devices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/deployments/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"deployments",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Deployments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/deployments/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"deployments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Deployment Unit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/deployments/{{deploymentId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"deployments",
+						"{{deploymentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Deployment Unit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"deployment1\",\n  \"startedTime\": \"string\",\n  \"location\": null,\n  \"organization\": {\n    \"id\": \"propertie\",\n    \"label\": \"string\"\n  },\n  \"platform\": {\n    \"id\": \"platform1\",\n    \"label\": \"string\",\n    \"devices\": [\n      \"string\"\n    ]\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/deployments/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"deployments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Deployment Unit",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/deployments/{{deploymentId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"deployments",
+						"{{deploymentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Device To Deployment Unit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/deployments/{{deploymentId}}/devices/{{deviceId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"deployments",
+						"{{deploymentId}}",
+						"devices",
+						"{{deviceId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Device In Deployment Unit",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/deployments/{{deploymentId}}/devices/{{deviceId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"deployments",
+						"{{deploymentId}}",
+						"devices",
+						"{{deviceId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Deployment Unit History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/deployments/{{deploymentId}}/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"deployments",
+						"{{deploymentId}}",
+						"history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
