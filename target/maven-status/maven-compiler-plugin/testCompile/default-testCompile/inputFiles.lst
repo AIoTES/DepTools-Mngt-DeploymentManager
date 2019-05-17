@@ -1,5 +1,5 @@
-/home/hopu/Activage/activage-deployment-manager/src/test/java/eu/hopu/activage/utils/HopAsserts.java
-/home/hopu/Activage/activage-deployment-manager/src/test/java/eu/hopu/activage/services/DeploymentManagerServiceTest.java
-/home/hopu/Activage/activage-deployment-manager/src/test/java/eu/hopu/activage/mappers/DeploymentMapperTest.java
-/home/hopu/Activage/activage-deployment-manager/src/test/java/eu/hopu/activage/mappers/DeviceMapperTest.java
-/home/hopu/Activage/activage-deployment-manager/src/test/java/eu/hopu/activage/metadataStorageClient/MetadataOkHttpClientIntegrationTest.java
+/home/hopu/Activage/DM-Deployment_manager/src/test/java/eu/hopu/activage/mappers/DeploymentMapperTest.java
+/home/hopu/Activage/DM-Deployment_manager/src/test/java/eu/hopu/activage/metadataStorageClient/MetadataOkHttpClientIntegrationTest.java
+/home/hopu/Activage/DM-Deployment_manager/src/test/java/eu/hopu/activage/mappers/DeviceMapperTest.java
+/home/hopu/Activage/DM-Deployment_manager/src/test/java/eu/hopu/activage/services/DeploymentManagerServiceTest.java
+/home/hopu/Activage/DM-Deployment_manager/src/test/java/eu/hopu/activage/utils/HopAsserts.java
